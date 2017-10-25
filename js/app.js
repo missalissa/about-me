@@ -39,9 +39,9 @@ if (activitiesAns.toLowerCase() === 'yes') {
 }
 
 const snacks = ['salami', 'cheese', 'gummy bears']
-const snacksAns = prompt('Do I like spaghetti?');
-console.log('likes spaghetti? ' + snacks.includes('spaghetti'));
-if (activitiesAns.toLowerCase() === 'no') {
+const snacksAns = prompt('Do I eat spaghetti?');
+console.log('eats spaghetti? ' + snacks.includes('spaghetti'));
+if (snacksAns.toLowerCase() === 'no') {
     alert('Correct, I do not care for spaghetti. I worked in an Italian restaurant and have eaten enough pasta for one lifetime. But if I were in Italy I would totally eat pasta.');
 } else {
     alert('No spaghetti for me. I worked in an Italian restaurant and have eaten enough pasta for one lifetime. But if I were in Italy I would totally eat pasta.');
