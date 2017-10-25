@@ -49,7 +49,7 @@
 
 // Q6. guessing game that takes numeric value, maximum of four attempts
 
-let numAttempts = 0; // initializer, number of attempts
+let numAttempts = 1; // initializer, number of attempts
 const miles = 11; // miles ridden
 let milesAns = prompt('How many miles did I ride yesterday?'); // user input
 console.log('user guessed ' + milesAns);
@@ -60,15 +60,19 @@ if (parseInt(milesAns) === miles) {
     alert('Good guess! That is correct.');
     console.log('user guessed the correct answer');
 } else {
-    while (parseInt(milesAns) !== miles && numAttempts < 3) {
-        numAttempts++;
+    console.log(numAttempts);
+    while (parseInt(milesAns) !== miles || numAttempts < 4) {
         if (parseInt(milesAns) < miles) {
             milesAns = prompt('Try again! I logged a few more miles.');
             console.log('user guessed too few miles');
         } else if (parseInt(milesAns) > miles) {
             milesAns = prompt('Not quite that many. Try again.');
             console.log('user guessed too many miles');
-        } else alert('Good guess! That is correct.');
+        } else {
+            alert('Good guess! That is correct.');
+            console.log ('user guessed correct amount');
+        }
+        numAttempts++;
     }
     // maximum amount of tries reached
     alert('No more guesses on this one. Thanks for trying!');
@@ -76,8 +80,12 @@ if (parseInt(milesAns) === miles) {
 
 // Q7. guessing game with multiple possible correct answers; maximum of six attempts
 
-let numAttempts = 0; //
-const favSnacks = ['salami', 'cheese', 'gummy bears', 'chips and salsa', 'almonds']; // my favorite snacks
-let favSnacksAns = prompt('Besides gummy bears, can you guess one of my favorite snacks?'); // user input
+// let numAttempts = 0; // initializer
+// const favSnacks = ['salami', 'cheese', 'gummy bears', 'chips and salsa', 'almonds']; // my favorite snacks
+// let favSnacksAns = prompt('Besides gummy bears, can you guess one of my favorite snacks?'); // user input
+
+// if (favSnacksAns === )
+
+
 
 
