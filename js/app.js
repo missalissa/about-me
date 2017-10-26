@@ -17,33 +17,51 @@ function runSister() {
     }
 };
 
+//Question 2 = false
 
-// const studies = ['Graphic Design', 'Linguistics', 'JavaScript'];
-// const studiesAns = prompt('Have I studied Astronomy?');
-// console.log('studied Astronomy? ' + studies.includes('Astronomy'));
-// if (studiesAns.toLowerCase() === 'no') {
-//     alert('You are correct! I have studied a few things, but Astronomy is not one of them.');
-// } else {
-//     alert('Alas, I have not studied Astronomy. I did study Linguistics though.');
-// }
+runStudies();
 
-// const animals = ['cats', 'dogs', 'giraffes'];
-// const animalsAns = prompt('Do I like giraffes?');
-// console.log('likes giraffes? ' + animals.includes('giraffes'));
-// if (animalsAns.toLowerCase() === 'yes') {
-//     alert('It\'s true, I do. I have never met one but they seem like gentle creatures.');
-// } else {
-//     alert('I do like giraffes. They seem like gentle creatures.');
-// }
+function runStudies () {
+    const studies = ['Graphic Design', 'Linguistics', 'JavaScript'];
+    const studiesAns = prompt('Have I studied Astronomy?');
+    console.log('studied Astronomy? ' + studies.includes('Astronomy'));
+    if (studiesAns.toLowerCase() === 'no') {
+        alert('You are correct! I have studied a few things, but Astronomy is not one of them.');
+    } else {
+        alert('Alas, I have not studied Astronomy. I did study Linguistics though.');
+    }
+};
 
-// const activities = ['fishing', 'hiking', 'JavaScript'];
-// const activitiesAns = prompt('Do I like to fish?');
-// console.log('likes to fish? ' + activities.includes('fishing') );
-// if (activitiesAns.toLowerCase() === 'yes') {
-//     alert('Yep, I do! I fish on the Missouri River with my Dad every year.');
-// } else {
-//     alert('Actually, walleye fishing is one of my favorite things to do.');
-// }
+//Question 3 = true
+
+runAnimals();
+
+function runAnimals() {
+    const animals = ['cats', 'dogs', 'giraffes'];
+    const animalsAns = prompt('Do I like giraffes?');
+    console.log('likes giraffes? ' + animals.includes('giraffes'));
+    if (animalsAns.toLowerCase() === 'yes') {
+        alert('It\'s true, I do. I have never met one but they seem like gentle creatures.');
+    } else {
+        alert('I do like giraffes. They seem like gentle creatures.');
+    }
+};
+
+//Question 4 = true
+
+runActivities();
+
+function runActivities () {
+    const activities = ['fishing', 'hiking', 'JavaScript'];
+    const activitiesAns = prompt('Do I like to fish?');
+    console.log('likes to fish? ' + activities.includes('fishing') );
+    if (activitiesAns.toLowerCase() === 'yes') {
+        alert('Yep, I do! I fish on the Missouri River with my Dad every year.');
+    } else {
+        alert('Actually, walleye fishing is one of my favorite things to do.');
+    }
+};
+
 
 // const snacks = ['salami', 'cheese', 'gummy bears'];
 // const snacksAns = prompt('Do I eat spaghetti?');
