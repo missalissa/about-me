@@ -49,19 +49,19 @@
 
 // Q6. guessing game that takes numeric value, maximum of four attempts
 
-let numAttempts = 1; // initializer, number of attempts
+let numAttemptsMiles = 1; // initializer, number of attempts
 const miles = 11; // miles ridden
 let milesAns = prompt('How many miles did I ride yesterday?'); // user input
 console.log('user guessed ' + milesAns);
 
-// begin loop if milesAns is not equal to miles
+// // begin loop if milesAns is not equal to miles
 
 if (parseInt(milesAns) === miles) {
     alert('Good guess! That is correct.');
     console.log('user guessed the correct answer');
 } else {
-    console.log(numAttempts);
-    while (parseInt(milesAns) !== miles || numAttempts < 4) {
+    console.log(numAttemptsMiles);
+    while (parseInt(milesAns) !== miles || numAttemptsMiles < 4) {
         if (parseInt(milesAns) < miles) {
             milesAns = prompt('Try again! I logged a few more miles.');
             console.log('user guessed too few miles');
@@ -72,7 +72,7 @@ if (parseInt(milesAns) === miles) {
             alert('Good guess! That is correct.');
             console.log ('user guessed correct amount');
         }
-        numAttempts++;
+        numAttemptsMiles++;
     }
     // maximum amount of tries reached
     alert('No more guesses on this one. Thanks for trying!');
@@ -80,12 +80,23 @@ if (parseInt(milesAns) === miles) {
 
 // Q7. guessing game with multiple possible correct answers; maximum of six attempts
 
-// let numAttempts = 0; // initializer
-// const favSnacks = ['salami', 'cheese', 'gummy bears', 'chips and salsa', 'almonds']; // my favorite snacks
-// let favSnacksAns = prompt('Besides gummy bears, can you guess one of my favorite snacks?'); // user input
+let numAttemptsCheese = 0; // initializer
+const cheese = ['chevre', 'parmesan', 'blue', 'brie']; // my favorite snacks
+let cheeseAns = prompt('Can you guess one of my favorite cheeses?');
 
-// if (favSnacksAns === )
+if (CheeseAns !== cheese.indexOf()) {
+    while (numAttemptsCheese < 5) {
+        prompt('try again!');
+        console.log(numAttemptsCheese);
+        numAttemptsCheese++;
+    } 
+} else {
+    while (numAttemptsCheese >= 5) {
+        prompt('no more guesses!');
+        console.log(numAttemptsCheese);
+        numAttemptsCheese++;
+    }
 
-
-
-
+if (cheeseAns === cheese.indexOf()) {
+    alert('Well done! You are correct.');
+} 
