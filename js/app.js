@@ -81,20 +81,24 @@ alert('Hello there!');
 
 // Q6. guessing game that takes numeric value, maximum of four attempts
 
-for (let attempts = 1; attempts < 5; attempts++) {
-    const milesAns = parseInt( prompt('How many miles did I ride yesterday?'));
-    console.log('miles answer was:' + milesAns);
-    if (milesAns === 11) {
-        alert('Good guess! That is correct.');
-        //score++ Add to each of your true answers
-        break;
-    } else if (milesAns <= 10) {
-        alert('Try again! I logged a few more miles.');
-    } else {
-        alert('Not quite that many. Try again.');
+runMiles ();
+function runMiles () {
+    for (let attempts = 1; attempts < 5; attempts++) {
+        const milesAns = parseInt( prompt('How many miles did I ride yesterday?'));
+        console.log('miles answer was:' + milesAns);
+        if (milesAns === 11) {
+            alert('Good guess! That is correct.');
+            //score++ Add to each of your true answers
+            break;
+        } else if (milesAns <= 10) {
+            alert('Try again! I logged a few more miles.');
+        } else {
+            alert('Not quite that many. Try again.');
+        }
     }
-}
-alert('Maximum tries reached.');
+    alert('Maximum tries reached.');
+};
+
 // let numAttemptsMiles = 1; // initializer, number of attempts
 // const miles = 11; // miles ridden
 // let milesAns = prompt('How many miles did I ride yesterday?'); // user input
