@@ -102,17 +102,20 @@ alert('Hello there!');
 
 // Q7. guessing game with multiple possible correct answers; maximum of six attempts
 
-for(let cheeseAttempt = 1; cheeseAttempt < 7; cheeseAttempt++) {
-    const cheese = ['chevre', 'parmesan', 'blue', 'brie']; // my favorite snacks
-    let cheeseAns = prompt('Can you guess one of my favorite cheese?');
-    console.log('what is my favorite cheese answer:' + cheeseAns);
-    if (cheese.includes(cheeseAns)){
-        alert('Yep! You guessed it, that is one of my favorite cheeses.');
-        //score++ 
-        break;
-    }else {
-        alert('Incorrect' + cheeseAttempt + ' guess out of six have been used');
-    }
-}
+runCheese();
 
+function runCheese () {
+    for(let cheeseAttempt = 1; cheeseAttempt < 7; cheeseAttempt++) {
+        const cheese = ['chevre', 'parmesan', 'blue', 'brie']; // my favorite snacks
+        let cheeseAns = prompt('Can you guess one of my favorite cheese?');
+        console.log('what is my favorite cheese answer:' + cheeseAns);
+        if (cheese.includes(cheeseAns)){
+            alert('Yep! You guessed it, that is one of my favorite cheeses.');
+            //score++ 
+            break;
+        }else {
+            alert('Incorrect' + cheeseAttempt + ' guess out of six have been used');
+        }
+    }
+};
 
