@@ -81,74 +81,38 @@ alert('Hello there!');
 
 // Q6. guessing game that takes numeric value, maximum of four attempts
 
-runMiles ();
-function runMiles () {
-    for (let attempts = 1; attempts < 5; attempts++) {
-        const milesAns = parseInt( prompt('How many miles did I ride yesterday?'));
-        console.log('miles answer was:' + milesAns);
-        if (milesAns === 11) {
-            alert('Good guess! That is correct.');
-            //score++ Add to each of your true answers
-            break;
-        } else if (milesAns <= 10) {
-            alert('Try again! I logged a few more miles.');
-        } else {
-            alert('Not quite that many. Try again.');
-        }
-    }
-    alert('Maximum tries reached.');
-};
-
-// let numAttemptsMiles = 1; // initializer, number of attempts
-// const miles = 11; // miles ridden
-// let milesAns = prompt('How many miles did I ride yesterday?'); // user input
-// console.log('user guessed ' + milesAns);
-
-// // // begin loop if milesAns is not equal to miles
-
-// if (parseInt(milesAns) === miles) {
-//     alert('Good guess! That is correct.');
-//     console.log('user guessed the correct answer');
-// } else {
-//     console.log(numAttemptsMiles);
-//     while (parseInt(milesAns) !== miles || numAttemptsMiles < 4) {
-//         if (parseInt(milesAns) < miles) {
-//             milesAns = prompt('Try again! I logged a few more miles.');
-//             console.log('user guessed too few miles');
-//         } else if (parseInt(milesAns) > miles) {
-//             milesAns = prompt('Not quite that many. Try again.');
-//             console.log('user guessed too many miles');
-//         } else {
+// runMiles ();
+// function runMiles () {
+//     for (let attempts = 1; attempts < 5; attempts++) {
+//         const milesAns = parseInt( prompt('How many miles did I ride yesterday?'));
+//         console.log('miles answer was:' + milesAns);
+//         if (milesAns === 11) {
 //             alert('Good guess! That is correct.');
-//             console.log ('user guessed correct amount');
+//             //score++ Add to each of your true answers
+//             break;
+//         } else if (milesAns <= 10) {
+//             alert('Try again! I logged a few more miles.');
+//         } else {
+//             alert('Not quite that many. Try again.');
 //         }
-//         numAttemptsMiles++;
 //     }
-//     // maximum amount of tries reached
-//     alert('No more guesses on this one. Thanks for trying!');
-// }
+//     alert('Maximum tries reached.');
+// };
 
-// // Q7. guessing game with multiple possible correct answers; maximum of six attempts
 
-// let numAttemptsCheese = 0; // initializer
-// const cheese = ['chevre', 'parmesan', 'blue', 'brie']; // my favorite snacks
-// let cheeseAns = prompt('Can you guess one of my favorite cheeses?');
+// Q7. guessing game with multiple possible correct answers; maximum of six attempts
 
-// if (CheeseAns !== cheese.indexOf()) {
-//     while (numAttemptsCheese < 5) {
-//         prompt('try again!');
-//         console.log(numAttemptsCheese);
-//         numAttemptsCheese++;
-//     } 
-// } else {
-//     while (numAttemptsCheese >= 5) {
-//         prompt('no more guesses!');
-//         console.log(numAttemptsCheese);
-//         numAttemptsCheese++;
-//     }
+for(let cheeseAttempt = 1; cheeseAttempt < 7; cheeseAttempt++) {
+    const cheese = ['chevre', 'parmesan', 'blue', 'brie']; // my favorite snacks
+    let cheeseAns = prompt('Can you guess one of my favorite cheese?');
+    console.log('what is my favorite cheese answer:' + cheeseAns);
+    if (cheese.includes(cheeseAns)){
+        alert('Yep! You guessed it, that is one of my favorite cheeses.');
+        //score++ 
+        break;
+    }else {
+        alert('Incorrect' + cheeseAttempt + ' guess out of six have been used');
+    }
+}
 
-// if (cheeseAns === cheese.indexOf()) {
-//     alert('Well done! You are correct.');
-// } 
 
-// blah blah blah
