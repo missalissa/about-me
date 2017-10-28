@@ -119,3 +119,9 @@ function runCheese () {
     }
 };
 
+=======
+if (cheeseAns === cheese.indexOf()) {
+    alert('Well done! You are correct.');
+};
+
+// testing branch set up
