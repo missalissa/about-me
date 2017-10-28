@@ -1,15 +1,32 @@
-h1 {
-    font-size: 3em;
-}
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
     line-height: 1.7em;
     color: blue;
-    margin: 75px;
+    margin: 8% 25%;
 }
 
-ol>li {
+h1 {
+    font-size: 3em;
+}
+
+ul>li {
     font-weight: bold;
+}
+
+a:link {
+    color: fuchsia;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:visited {
+    color: fuchsia;
+    font-weight: bold;
+}
+
+a:hover {
+    color: blue; 
+    font-weight: bold;
+    background-color: rgb(0,255,0);
 }
