@@ -1,38 +1,40 @@
 'use strict';
 
-alert('Hello there!');
+alert('Hello! The first five questions will be yes or no.');
 
-//Question one
+// Q1. Siblings (true)
 
-// runSister();
+runSister();
 
-// function runSister() {
-//     const sister = true;
-//     const sisterAns = prompt('First off, do I have a sister?');
-//     console.log('has a sister? ' + sister);
-//     if (sisterAns.toLowerCase() === 'yes') {
-//         alert('You are correct! Her name is Trevi and she lives in Washington.');
-//     } else {
-//         alert('I do have a sister. Her name is Trevi and she lives in Washington.');
-//     }
-// };
+function runSister() {
+    const sister = true; // declares variable and value
+    const sisterAns = prompt('First off, do I have a sister?'); // prompts first question
+    console.log('have a sister? ' + sister);
+    console.log('user replied: ' + sisterAns); 
+    if (sisterAns.toLowerCase() === 'yes' || sisterAns.toLowerCase() === 'y') {
+        alert('You are correct! Her name is Trevi and she lives in Washington.');
+    } else {
+        alert('I do have a sister. Her name is Trevi and she lives in Washington.');
+    }
+};
 
-// //Question 2 = false
+// Q2. Studies (false)
 
-// runStudies();
+runStudies();
 
-// function runStudies () {
-//     const studies = ['Graphic Design', 'Linguistics', 'JavaScript'];
-//     const studiesAns = prompt('Have I studied Astronomy?');
-//     console.log('studied Astronomy? ' + studies.includes('Astronomy'));
-//     if (studiesAns.toLowerCase() === 'no') {
-//         alert('You are correct! I have studied a few things, but Astronomy is not one of them.');
-//     } else {
-//         alert('Alas, I have not studied Astronomy. I did study Linguistics though.');
-//     }
-// };
+function runStudies () {
+    const studies = ['Graphic Design', 'Linguistics', 'JavaScript'];
+    const studiesAns = prompt('Have I studied Astronomy?');
+    console.log('have I studied Astronomy? ' + studies.includes('Astronomy'));
+    console.log('user replied: ' + studiesAns);
+    if (studiesAns.toLowerCase() === 'no' || studiesAns.toLowerCase() === 'n') {
+        alert('You are correct! I have studied a few things, but Astronomy is not one of them.');
+    } else {
+        alert('Alas, I have not studied Astronomy.');
+    }
+};
 
-// //Question 3 = true
+// Q3 = true
 
 // runAnimals();
 
@@ -102,26 +104,24 @@ alert('Hello there!');
 
 // Q7. guessing game with multiple possible correct answers; maximum of six attempts
 
-runCheese();
+// runCheese();
 
-function runCheese () {
-    for(let cheeseAttempt = 1; cheeseAttempt < 7; cheeseAttempt++) {
-        const cheese = ['chevre', 'parmesan', 'blue', 'brie']; // my favorite snacks
-        let cheeseAns = prompt('Can you guess one of my favorite cheese?');
-        console.log('what is my favorite cheese answer:' + cheeseAns);
-        if (cheese.includes(cheeseAns)){
-            alert('Yep! You guessed it, that is one of my favorite cheeses.');
-            //score++ 
-            break;
-        }else {
-            alert('Incorrect' + cheeseAttempt + ' guess out of six have been used');
-        }
-    }
-};
+// function runCheese () {
+//     for(let cheeseAttempt = 1; cheeseAttempt < 7; cheeseAttempt++) {
+//         const cheese = ['chevre', 'parmesan', 'blue', 'brie']; // my favorite snacks
+//         let cheeseAns = prompt('Can you guess one of my favorite cheese?');
+//         console.log('what is my favorite cheese answer:' + cheeseAns);
+//         if (cheese.includes(cheeseAns)){
+//             alert('Yep! You guessed it, that is one of my favorite cheeses.');
+//             //score++ 
+//             break;
+//         }else {
+//             alert('Incorrect' + cheeseAttempt + ' guess out of six have been used');
+//         }
+//     }
+// };
 
-=======
-if (cheeseAns === cheese.indexOf()) {
-    alert('Well done! You are correct.');
-};
-
-// testing branch set up
+// =======
+// if (cheeseAns === cheese.indexOf()) {
+//     alert('Well done! You are correct.');
+// };
