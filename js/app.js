@@ -1,6 +1,10 @@
 'use strict';
 
-alert('Hello! The first five questions will be yes or no.');
+const username = prompt('Hello! What\'s your name?');
+console.log('user\'s name is: ' + username);
+alert('Hello, ' + username + '! ' + 'Let\'s get started. The first five questions will be yes or no.');
+
+let score = 0;
 
 // Q1. Siblings (true)
 
@@ -9,10 +13,11 @@ runSister();
 function runSister() {
     const sister = true; // declares variable and value
     const sisterAns = prompt('First off, do I have a sister?'); // prompts first question
-    console.log('have a sister? ' + sister);
+    console.log('do I have a sister? ' + sister);
     console.log('user replied: ' + sisterAns); 
     if (sisterAns.toLowerCase() === 'yes' || sisterAns.toLowerCase() === 'y') {
         alert('You are correct! Her name is Trevi and she lives in Washington.');
+        score ++;
     } else {
         alert('I do have a sister. Her name is Trevi and she lives in Washington.');
     }
@@ -29,57 +34,61 @@ function runStudies () {
     console.log('user replied: ' + studiesAns);
     if (studiesAns.toLowerCase() === 'no' || studiesAns.toLowerCase() === 'n') {
         alert('You are correct! I have studied a few things, but Astronomy is not one of them.');
+        score++;
     } else {
         alert('Alas, I have not studied Astronomy.');
     }
 };
 
-// Q3 = true
+// Q3. Animals (true)
 
-// runAnimals();
+runAnimals();
 
-// function runAnimals() {
-//     const animals = ['cats', 'dogs', 'giraffes'];
-//     const animalsAns = prompt('Do I like giraffes?');
-//     console.log('likes giraffes? ' + animals.includes('giraffes'));
-//     if (animalsAns.toLowerCase() === 'yes') {
-//         alert('It\'s true, I do. I have never met one but they seem like gentle creatures.');
-//     } else {
-//         alert('I do like giraffes. They seem like gentle creatures.');
-//     }
-// };
+function runAnimals() {
+    const animals = ['cats', 'dogs', 'giraffes'];
+    const animalsAns = prompt('Do I like giraffes?');
+    console.log('do I like giraffes? ' + animals.includes('giraffes'));
+    console.log('user replied: ' + animalsAns);
+    if (animalsAns.toLowerCase() === 'yes' || animalsAns.toLowerCase() === 'y') {
+        alert('It\'s true, I do. They seem like gentle creatures.');
+        score++;
+    } else {
+        alert('I do like giraffes. They seem like gentle creatures.');
+    }
+};
 
-// //Question 4 = true
+// Q4. Activities (true)
 
-// runActivities();
+runActivities();
 
-// function runActivities () {
-//     const activities = ['fishing', 'hiking', 'JavaScript'];
-//     const activitiesAns = prompt('Do I like to fish?');
-//     console.log('likes to fish? ' + activities.includes('fishing') );
-//     if (activitiesAns.toLowerCase() === 'yes') {
-//         alert('Yep, I do! I fish on the Missouri River with my Dad every year.');
-//     } else {
-//         alert('Actually, walleye fishing is one of my favorite things to do.');
-//     }
-// };
+function runActivities () {
+    const activities = ['fishing', 'hiking', 'JavaScript'];
+    const activitiesAns = prompt('Do I like to fish?');
+    console.log('do I like to fish? ' + activities.includes('fishing') );
+    console.log('user replied: ' + activitiesAns);
+    if (activitiesAns.toLowerCase() === 'yes' || activitiesAns.toLowerCase() === 'y') {
+        alert('Yep! I still go fishing with my Dad every year.');
+        score++;
+    } else {
+        alert('Actually, walleye fishing is one of my favorite things to do.');
+    }
+};
 
-// //Question 5 = false
+// Q5. Snacks (false)
 
-// runSnacks();
+runSnacks();
 
-// function runSnacks () {
-//     const snacks = ['salami', 'cheese', 'gummy bears'];
-//     const snacksAns = prompt('Do I eat spaghetti?');
-//     console.log('eats spaghetti? ' + snacks.includes('spaghetti'));
-//     if (snacksAns.toLowerCase() === 'no') {
-//         alert('Correct, I do not care for spaghetti. I worked in an Italian restaurant and have eaten enough pasta for one lifetime. But if I were in Italy I would totally eat pasta.');
-//     } else {
-//         alert('No spaghetti for me. I worked in an Italian restaurant and have eaten enough pasta for one lifetime. But if I were in Italy I would totally eat pasta.');
-//     }
-// };
-
-//Question 6 
+function runSnacks () {
+    const snacks = ['salami', 'cheese', 'gummy bears'];
+    const snacksAns = prompt('Do I eat spaghetti?');
+    console.log('eats spaghetti? ' + snacks.includes('spaghetti'));
+    if (snacksAns.toLowerCase() === 'no' || snacksAns.toLowerCase() === 'n') {
+        alert('Correct, I do not care for spaghetti. I worked in an Italian restaurant and have eaten enough pasta for one lifetime. Unless I were in Italy.');
+        score++;
+    } else {
+        alert('No spaghetti for me. I worked in an Italian restaurant and have eaten enough pasta for one lifetime. Unless I were in Italy.');
+    }
+};
 
 // Q6. guessing game that takes numeric value, maximum of four attempts
 
